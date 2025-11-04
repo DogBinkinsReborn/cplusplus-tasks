@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string>
+
+using std::cout; using std::cin;
+int main() {
+    
+//Завдання 1
+int N; int result=0;
+cout << "task 1 \n";
+cout << "Enter number (three digit number) ";
+cin >> N;
+int a = N/100;
+int b = (N/10)%10;
+int c = N%10;
+
+if (N >= 100 && N <= 999) {
+
+if (a>3) { result +=1; }
+if (b>3) { result +=1; }
+if (c>3) { result +=1; }
+cout << "Result: "<< result << "\n";
+
+}
+else { cout<<"Wrong number \n"; }
+
+//Завдання 2
+int NumberOfWeekDay;
+cout << "Input number of the week from 1 to 7, (1-sunday,7-saturday) \n";
+cin >> NumberOfWeekDay;
+
+switch (NumberOfWeekDay) {
+    case 1: cout << "Sunday - Nedilia"; break; //Неділя
+    case 2: cout << "Monday - Ponedilok"; break; //Понеділок
+    case 3: cout << "Tuesday - Vivtorok"; break; //Вівторок
+    case 4: cout << "Wednesday - Sereda"; break; //Середа
+    case 5: cout << "Thursday - Chetver"; break; //Четвер
+    case 6: cout << "Friday - Piatnytsia"; break; //П'ятниця
+    case 7: cout << "Saturday - Subota"; break; //Субота
+    default: cout << "Doesn't exist"; break;
+}
+
+}
