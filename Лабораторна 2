@@ -1,0 +1,34 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+int main()
+{
+
+//Завдання 1
+double GivenX; double Tangent;
+std::cout << "Task 1 practice 2: \n";
+std::cout << "Enter an x \n";
+std::cin >> GivenX;
+
+if (GivenX >= 0 ) {
+std::cout << (exp(-GivenX)*tan( (1/ (pow(GivenX,2)+8.2)))); std::cout << "\n";
+}
+else if (GivenX < 0) {
+std::cout << (GivenX*( (0.32*GivenX+2.5)/pow(GivenX,2)+3) ); std::cout << "\n";
+}
+
+//Завдання 2
+double GivenX_Two; double GivenY_Two; double Point;
+std::cout << "Task 2 practice 2: \n";
+std::cout << "Enter an x: \n";
+std::cin >> GivenX_Two;
+std::cout << "Enter a y: \n";
+std::cin >> GivenY_Two;
+Point = std::abs(GivenX_Two) + std::abs(GivenY_Two);
+
+if (GivenX_Two < 0 && GivenY_Two < 0 ) {std::cout << "Outside \n"; }
+else if (Point > 1) { std:: cout << "Outside \n"; }
+else { std::cout << "Inside \n"; }
+
+}
