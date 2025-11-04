@@ -1,0 +1,65 @@
+//ПРАКТИЧНА 5 C++
+#include <iostream>
+#include <string>
+#include <cmath>
+using std::cout; using std::cin;
+int SkipTo = 3;
+//task 1,2,3 
+
+int main() {
+
+//ЗАВДАННЯ 1
+if (SkipTo==1) {
+//написати від 1 до 5 для легкості обрахунків
+double ProvidedX; double CalculatedY;
+for (int i=0;i<5;i++) {
+cout << "Calculation"<<(i+1)<<" - Write an x \n";
+cin >> ProvidedX;
+CalculatedY = ( pow(sin(ProvidedX),5) + abs(5*ProvidedX - 1.5) );
+cout << CalculatedY<<"\n";
+}//iteration
+
+}//skip to
+
+//ЗАВДАННЯ 2
+else if (SkipTo==2) {
+    double Sum=0;
+    for (int i=10;i<21;i++) {
+        cout << i <<", ";
+        Sum+=(sqrt(i));
+    }
+   
+    cout << "\nSum of roots of numbers from 10 to 20 - " << Sum;;
+}
+
+//ЗАВДАННЯ 3
+else if (SkipTo==3) {
+double a; double b; double h;
+cout << "Input a,b and h (a cannot be bigger than b) \n";
+cout << "a: "; cin >> a;
+cout << "b: "; cin >> b;
+cout << "h: "; cin >> h;
+if (a>=b) { cout << "you typed a>=b, system adjusted your picks to a=0 and b=2 \n"; a=0; b=2; }
+cout << "Your numbers: a: "<<a<<" , b: "<<b<<" , h:"<<h<<"\n";
+
+//змінна а використовується як початкове значення для ітерації а б як ліміт після якого треба зупинитись
+for (double x=a;x<=b;x+=h) {
+double Numerator = (sqrt(x-7));
+double Denominator = (x+5);
+
+if ( Denominator==0) {
+    cout << "Denominator ends up equaling 0, iteration is done \n";
+    break;
+}
+else if (x-7<=0) {
+    cout << "Square root parameter ends up being negative, iteration is done \n";
+    break;
+}
+
+double Y_Expression = 8 + (Numerator/Denominator);
+cout << "x: "<<x<<" ,y: "<<Y_Expression<<"\n";
+}
+
+}
+
+}
