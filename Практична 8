@@ -1,0 +1,56 @@
+//ПРАКТИЧНА РОБОТА 8 C++
+#include <iostream>
+using std::cout; using std::cin;
+int SkipTo=1;
+
+int main() {
+
+//ЗАВДАННЯ 1
+if (SkipTo==1) {
+int FullNumbers[12]={9,2,1,5,3,7,125,8,6,42,68,92}; 
+//0,1,2,3,5,6,7,8,42,68,92,125
+ //125,92,68,42,8,7,6,5,3,2,1
+int inumber; int jnumber;
+
+for (int i=0;i<12;i++) {
+int UsedNumber=FullNumbers[i];
+
+for (int j=0;j<12;j++) { // < для найменшого до найбільшого та > для найбільшого до найменшого
+if (j==i) { continue; }
+if (UsedNumber<FullNumbers[j]) { //
+
+inumber=FullNumbers[i];
+jnumber=FullNumbers[j];
+
+FullNumbers[i]=jnumber;
+FullNumbers[j]=inumber;
+} 
+}
+
+} // кінець головної ітерації
+for (int i=0;i<12;i++) { cout<<" "<<FullNumbers[i]<<" "; }
+
+}
+//ЗАВДАННЯ 2
+if (SkipTo==2) {
+
+int MaxNumber=-50000; int MaxIndex;
+int FullNumbers[6]={6,-23,3,40,-5,10};
+
+//Знаходження найбільшого числа та який його індекс
+for (int i=0;i<6;i++) { 
+if (FullNumbers[i] > MaxNumber) { 
+MaxNumber=FullNumbers[i];
+ MaxIndex=i;
+}
+ } 
+ 
+ //Заміна негативних чисел на нуль 
+ for (int i=0;i<6;i++) { 
+ if (FullNumbers[i]<0 && i<=MaxIndex) { FullNumbers[i]=0; } 
+ cout<<" "<<FullNumbers[i]<<" "; 
+ }
+ 
+}
+
+}
