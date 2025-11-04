@@ -1,0 +1,28 @@
+#include <iostream>
+#include <string>
+#include <cmath>
+
+int main()
+{
+
+//Завдання 1
+double a=3; double b=0.151; 
+double Numerator; double Denominator; double Answer; double InnerPortion;
+
+InnerPortion = ( b/a) * M_PI);
+Numerator = (1 - pow((cos(InnerPortion)),2) );
+Denominator = (0.5 * exp(b) + 0.312 * exp(a) );
+Answer = Numerator/Denominator;
+std::cout << Answer;
+
+//Завдання 2
+
+double a=2; double b=12.11;
+double InnerCos;
+
+Numerator = 0.5 * (log(a) + log(b));
+Denominator = cbrt(cos(InnerCos)*(M_PI/6));
+Answer = Numerator/Denominator;
+std::cout << Answer;
+
+}
